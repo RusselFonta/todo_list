@@ -26,7 +26,7 @@ solve the problem of data storage by the user
 
 ## 📷 Screenshot
 
-![alt text](<assets/Pasted image.png>)
+![example output](<assets/Pasted image.png>)
 
 ## ⚙ Installation & Setup
 
