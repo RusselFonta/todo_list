@@ -3,35 +3,27 @@ if [[ ! -f "task.txt" ]]; then
     touch task.txt
 fi
 show_help(){
-    echo "Usage: $0 [Add|List|delete|Help]"
+    echo "Usage:"
     echo " Avaiable options:"
-    echo "  Add: Adding a new task to the list."
-    echo "  List: Display all tasks in the list."
-    echo "  Delete: Delete a task from the list by its number."
-    echo "  Help: Show this help message."
+    echo "  Add: $0 add \"Descript what you are adding\""
+    echo "  list: $0 list \"Display all tasks in the list.\""
+    echo "  del: $0  del \"Enter task number you want to delete.\""
 }
-if [[ -n "$1" ]]; then
+if [[ "$#" -eq 2 ]]; then
     case "$1" in
-        "Add")
-            read -rp "enter task to be added: " Add
-            echo "$Add" >> task.txt
-            echo "$Add was added to the file."
+        "add")
+            echo "$2" >> task.txt
+            echo "$2 was added to the file."
             ;;
-        "List")
-                echo "Tasks in the list:"
-                cat task.txt
-            
-            ;;
-        "Delete")
+        "del")
                total_tasks=$(wc -l < task.txt)
                 if [[ "$total_tasks" -eq 0 ]]; then
                echo "empty list"
                else
                while true;do
-               read -rp "enter the number of the task to delete: " del
-               if [[ "$del" =~ ^[0-9]+$ ]] && [[ "$del" -ge 1 ]] && [[ "$del" -le "$total_tasks" ]]; then
-                     sed -i "${del}d" task.txt
-                     echo "Task $del has been deleted."
+               if [[ "$2" =~ ^[0-9]+$ ]] && [[ "$2" -ge 1 ]] && [[ "$2" -le "$total_tasks" ]]; then
+                     sed -i "${2}d" task.txt
+                     echo "Task $2 has been deleted."
                      break
                 else
                      echo "Invalid task number. Please enter a number between 1 and $total_tasks."
@@ -39,13 +31,21 @@ if [[ -n "$1" ]]; then
                 done
                 fi
             ;;
-        "Help")
+        *)
             show_help
             ;;
-        *)
-            echo "Invalid option. Use 'Help' for usage information."
-            ;;
     esac
+elif [[ "$#" -eq 1 ]]; then
+if [[ "$1" == "list" ]]; then
+  if [[ ! -s "task.txt" ]]; then
+    echo "list is empty"
+else
+  echo "task in the list"
+  cat -n task.txt
+ fi
+else
+ show_help
+fi
 else
     show_help
 fi
