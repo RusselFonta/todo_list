@@ -18,16 +18,17 @@ if [[ "$#" -eq 2 ]]; then
       task_string="$2"
       if [[ "$task_string" =~ ^[0-9]+$ ]]; then
         echo "Error: Numbers alone are not allowed. Only text strings are accepted."
-        read -rp "Please enter a valid text description: " task_string
       elif [[ -z "${task_string// }" ]]; then
         echo "Error: Task description cannot be empty."
         read -rp "Please enter a valid text description: " task_string
       elif grep -Fxq "$task_string" tasks.txt; then
         echo "Error: Task already existing "
-
+        else
+        echo "$task_string" >> tasks.txt
+        echo "\"$task_string\" was added to the file."
       fi
-      echo "$task_string" >> tasks.txt
-      echo "\"$task_string\" was added to the file."
+    #   echo "$task_string" >> tasks.txt
+    #   echo "\"$task_string\" was added to the file."
     ;;
     "del")
       total_tasks=$(wc -l < tasks.txt)

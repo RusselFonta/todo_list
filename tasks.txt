@@ -1,2 +1,5 @@
-ssg
-sdg
+revise
+cook
+buy_milk
+sleep
+assignments
