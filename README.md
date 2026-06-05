@@ -19,7 +19,7 @@ Traditional task management tools often require heavy graphical interfaces or in
 * **Version Control:** Git & GitHub
 
 ## 📷 UI Preview
-![alt text](<assets/Screenshot From 2026-06-05 17-49-39.png>)
+![alt text](assets/image.png)
 
 ## ⚙️ Installation & Setup
 
