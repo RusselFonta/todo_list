@@ -19,7 +19,7 @@ Traditional task management tools often require heavy graphical interfaces or in
 * **Version Control:** Git & GitHub
 
 ## 📷 UI Preview
-![alt text](assets/image.png)
+![Terminal Interface](assets/image.png)
 
 ## ⚙️ Installation & Setup
 
@@ -27,7 +27,7 @@ Follow these steps to set up and run the application locally on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/RusselFonta/todo_list.git
    ```
 
 2. **Navigate to the project directory:**
