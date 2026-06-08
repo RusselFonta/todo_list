@@ -40,7 +40,7 @@ if [[ "$#" -eq 2 ]]; then
           sed -i "${task_num}d" tasks.txt
           echo "Task $task_num has been deleted."
         else
-          echo "ERROR: invalide task number (valide range: 1 to "$total_tasks")"
+          echo "ERROR: invalide task number (valide range: 1 to $total_tasks)"
         fi
       fi
     ;;
