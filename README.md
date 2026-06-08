@@ -37,12 +37,12 @@ Follow these steps to set up and run the application locally on your machine:
 
 3. **Grant execution permissions to the script:**
    ```bash
-   chmod +x Todo.sh
+   chmod +x todo.sh
    ```
 
 4. **Launch the application:**
    ```bash
-   ./Todo.sh
+   ./todo.sh
    ```
 
 ## 📚 What I Learned
@@ -60,7 +60,7 @@ Follow these steps to set up and run the application locally on your machine:
 ## 👨🏽‍💻 Author
 
 **Russel Fonta Fadil**  
-*Shell & Systems Developer*
+*Shell & Junior Fullstack Developer*
 
 * 📩 **Email:** [fontawestbrook99@gmail.com](mailto:fontawestbrook99@gmail.com)
 * 🌍 **Location:** Cameroon (Open to remote opportunities worldwide)

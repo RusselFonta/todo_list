@@ -20,7 +20,7 @@ if [[ "$#" -eq 2 ]]; then
         echo "Error: Numbers alone are not allowed. Only text strings are accepted."
       elif [[ -z "${task_string// }" ]]; then
         echo "Error: Task description cannot be empty."
-        read -rp "Please enter a valid text description: " task_string
+        exit 1
       elif grep -Fxq "$task_string" tasks.txt; then
         echo "Error: Task already existing "
         else
@@ -40,7 +40,7 @@ if [[ "$#" -eq 2 ]]; then
           sed -i "${task_num}d" tasks.txt
           echo "Task $task_num has been deleted."
         else
-          echo "Invalid task number. Please enter a number between 1 and $total_tasks."
+          echo "ERROR: invalide task number (valide range: 1 to "$total_tasks")"
         fi
       fi
     ;;
