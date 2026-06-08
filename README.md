@@ -1,11 +1,11 @@
 # 📝 Terminal To-Do List Application
 
-A lightweight, fast, and dependency-free Command Line Interface (CLI) application built in Bash to efficiently manage daily tasks directly from your terminal.
+A lightweight, fast, and dependency-free command-line interface (CLI) application built-in Bash to efficiently manage daily tasks directly from your terminal.
 
 ---
 
 ## 📌 Problem Statement & Project Goals
-Traditional task management tools often require heavy graphical interfaces or internet connectivity. This project solves the problem of local text-based data storage by providing users with a native, secure, and immediate way to persist, view, and manage their tasks without leaving the command line.
+Traditional task management tools often require heavy graphical interfaces or internet connectivity. This project solves the problem of local text-based data storage by providing users with a native, secure, and immediate way to persist, view, and manage their tasks without leaving the command-line.
 
 ## 🎯 Key Features
 * **Persistent Storage**: Securely saves all user input locally in a plain text database.
@@ -32,7 +32,7 @@ Follow these steps to set up and run the application locally on your machine:
 
 2. **Navigate to the project directory:**
    ```bash
-   cd Todo-list
+   cd todo_list
    ```
 
 3. **Grant execution permissions to the script:**
